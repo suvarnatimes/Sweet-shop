@@ -1,0 +1,6 @@
+{
+  "name": "Thatha Rao Sweets - Authentic Bandar Laddu & Halwa",
+  "description": "Official online store of Sri Lakshmi Satyanarayana Thatha Rao Sweets, Machilipatnam (Estd. 1951). Handcrafted GI-tagged Bandar Laddu, Bandar Halwa, and Andhra sweets delivered fresh pan-India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

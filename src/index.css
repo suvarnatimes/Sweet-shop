@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-royal: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #29150B;
+    background-color: #FFFDF7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: var(--font-heading);
+  }
+
+  .font-royal {
+    font-family: var(--font-royal);
+  }
+}
+
+/* Custom scrollbar for royal aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFBEB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D97706;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
+
+/* Kolam / Rangoli subtle background pattern */
+.kolam-pattern {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.18) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #78350F 0%, #D97706 35%, #F59E0B 70%, #92400E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-metallic-text {
+  background: linear-gradient(180deg, #FDF0CD 0%, #E6B15C 40%, #B8860B 70%, #855307 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Perspective & Spatial Depth utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Traditional Indian Temple Border Motif */
+.temple-border-top {
+  background-image: radial-gradient(circle at 10px 0, transparent 0, transparent 6px, #D97706 7px, transparent 8px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+/* Brass & Gold Foil Card Borders */
+.gold-foil-border {
+  border-image: linear-gradient(135deg, #FDE68A 0%, #D97706 40%, #92400E 70%, #F59E0B 100%) 1;
+}
+
+.brass-sheen {
+  background: linear-gradient(145deg, rgba(254, 243, 199, 0.4) 0%, rgba(217, 119, 6, 0.08) 50%, rgba(146, 64, 14, 0.18) 100%);
+}

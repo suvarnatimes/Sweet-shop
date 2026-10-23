@@ -115,7 +115,7 @@ export const HomeView: React.FC = () => {
   return (
     <div className="space-y-16 sm:space-y-24 pb-16">
       {/* 1. Grand 3D Indian Heritage Hero Section */}
-      <section className="relative bg-gradient-to-b from-[#220E15] via-[#1A0A0F] to-[#12050A] text-white pt-8 pb-14 sm:pt-14 sm:pb-24 border-b-2 border-amber-500/40 overflow-hidden shadow-2xl">
+      <section className="relative bg-gradient-to-b from-[#220E15] via-[#1A0A0F] to-[#12050A] text-white pt-5 pb-12 sm:pt-14 sm:pb-24 border-b-2 border-amber-500/40 overflow-hidden shadow-2xl">
         {/* Ornate Indian Temple Architectural Toranam / Arch Watermark */}
         <div className="absolute inset-0 kolam-pattern opacity-10 pointer-events-none" />
         
@@ -127,12 +127,17 @@ export const HomeView: React.FC = () => {
         <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-80" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
-            {/* Left Content Column */}
-            <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
+            {/* 3D Artisanal Brass Thali Centerpiece with Bandar Laddu - Placed ON TOP in Mobile View */}
+            <div className="order-1 lg:order-2 lg:col-span-6 w-full">
+              <Hero3DThali />
+            </div>
+
+            {/* Left Content Column - Displayed below 3D Laddu in mobile view, Left column in desktop */}
+            <div className="order-2 lg:order-1 lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
               
-              {/* Royal Heritage Insignia Ribbon (No generic AI pills) */}
+              {/* Royal Heritage Insignia Ribbon */}
               <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-gradient-to-r from-amber-500/20 via-rose-950/40 to-transparent p-1.5 pr-4 rounded-xl border border-amber-500/40 backdrop-blur-md shadow-lg">
                 <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-amber-600 text-stone-950 font-black text-[11px] px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">
                   <Award className="w-3.5 h-3.5" />
@@ -148,35 +153,35 @@ export const HomeView: React.FC = () => {
               </div>
 
               {/* Grand Regally Styled Headings */}
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
                   <span className="w-8 h-px bg-amber-400/60 hidden sm:inline-block" />
                   <span>Sacred Confectionery of Andhra</span>
                   <span className="w-8 h-px bg-amber-400/60 hidden sm:inline-block" />
                 </div>
 
-                <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+                <h1 className="font-serif-luxury text-2xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
                   The Living Heritage of{' '}
                   <span className="gold-metallic-text drop-shadow-[0_4px_12px_rgba(217,119,6,0.3)]">
                     Bandar Sweets
                   </span>
                 </h1>
 
-                <p className="text-sm sm:text-base font-semibold text-amber-300 leading-snug">
+                <p className="text-xs sm:text-base font-semibold text-amber-300 leading-snug">
                   శ్రీ లక్ష్మీ సత్యనారాయణ తాతా రావు స్వీట్స్ • 75 ఏళ్ల నిఖార్సయిన రుచి & స్వచ్ఛత
                 </p>
               </div>
 
               {/* Editorial Description */}
-              <p className="text-sm sm:text-base text-stone-300 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
+              <p className="text-xs sm:text-base text-stone-300 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
                 Crafted daily at our historic Fort Road kitchen in Machilipatnam. Hand-pounded boondi on ancient stone mortars, simmered in 100% pure coastal cow ghee and fresh Krishna sugarcane jaggery. Prepared by master artisans with zero chemicals.
               </p>
 
               {/* Action Buttons with 3D Tactile Finish */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
                 <button
                   onClick={() => navigateTo('shop')}
-                  className="px-7 py-3.5 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-[0_10px_25px_-5px_rgba(245,158,11,0.5)] transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-2 border border-amber-300 group"
+                  className="px-6 py-3.5 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-[0_10px_25px_-5px_rgba(245,158,11,0.5)] transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-2 border border-amber-300 group"
                 >
                   <span>Order Bandar Laddu Now</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -184,7 +189,7 @@ export const HomeView: React.FC = () => {
 
                 <button
                   onClick={() => navigateTo('about')}
-                  className="px-6 py-3.5 bg-white/5 hover:bg-white/10 text-amber-200 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl border border-amber-500/40 hover:border-amber-400 transition-all flex items-center justify-center gap-2"
+                  className="px-5 py-3.5 bg-white/5 hover:bg-white/10 text-amber-200 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl border border-amber-500/40 hover:border-amber-400 transition-all flex items-center justify-center gap-2"
                 >
                   <span>Explore 1951 Story</span>
                 </button>
@@ -202,7 +207,7 @@ export const HomeView: React.FC = () => {
               </div>
 
               {/* Traditional Trust Verification Strip */}
-              <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-stone-300">
+              <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-5 text-xs text-stone-300">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full bg-amber-500/20 border border-amber-400/60 flex items-center justify-center text-amber-300">
                     ✓
@@ -218,14 +223,9 @@ export const HomeView: React.FC = () => {
                 <div className="flex items-center gap-1.5 text-amber-400 font-bold">
                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   <span>4.9★</span>
-                  <span className="text-stone-400 font-normal">(3,800+ Andhra Devotees)</span>
+                  <span className="text-stone-400 font-normal">(3,800+ Devotees)</span>
                 </div>
               </div>
-            </div>
-
-            {/* Right Column: 3D Artisanal Brass Thali Centerpiece */}
-            <div className="lg:col-span-6">
-              <Hero3DThali />
             </div>
 
           </div>

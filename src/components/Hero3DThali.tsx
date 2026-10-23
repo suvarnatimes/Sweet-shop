@@ -121,11 +121,11 @@ export const Hero3DThali: React.FC = () => {
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative perspective-1000 py-4 px-2 sm:px-6 cursor-grab active:cursor-grabbing"
+        className="relative perspective-1000 py-1 sm:py-4 px-1 sm:px-6 cursor-grab active:cursor-grabbing"
       >
         {/* Ambient Backlight Glow - Warm Temple Brass & Ghee Radiance */}
         <div
-          className="absolute inset-0 m-auto w-72 sm:w-96 h-72 sm:h-96 rounded-full blur-3xl pointer-events-none transition-all duration-700 opacity-60"
+          className="absolute inset-0 m-auto w-64 sm:w-96 h-64 sm:h-96 rounded-full blur-3xl pointer-events-none transition-all duration-700 opacity-60"
           style={{
             background: `radial-gradient(circle, rgba(245, 158, 11, 0.45) 0%, rgba(217, 119, 6, 0.25) 45%, rgba(136, 19, 55, 0.15) 75%, transparent 100%)`,
             transform: `translate(${rotateY * 2}px, ${-rotateX * 2}px)`,
@@ -143,12 +143,12 @@ export const Hero3DThali: React.FC = () => {
           <div
             className="w-[85%] h-14 mx-auto rounded-full blur-xl bg-stone-950/40 pointer-events-none transition-all duration-300"
             style={{
-              transform: `translateY(340px) scaleX(${1 + Math.abs(rotateY) * 0.01})`,
+              transform: `translateY(300px) sm:translateY(340px) scaleX(${1 + Math.abs(rotateY) * 0.01})`,
             }}
           />
 
           {/* Traditional Embossed Brass Thali (Plate) Presentation */}
-          <div className="relative w-full aspect-square max-w-[380px] sm:max-w-[420px] mx-auto flex items-center justify-center">
+          <div className="relative w-full aspect-square max-w-[280px] xs:max-w-[320px] sm:max-w-[420px] mx-auto flex items-center justify-center">
             {/* SVG Ornate Chased Brass Thali Base */}
             <svg
               viewBox="0 0 500 500"
@@ -316,18 +316,18 @@ export const Hero3DThali: React.FC = () => {
       </div>
 
       {/* Sweet Information Strip & Direct Order Callout */}
-      <div className="mt-4 bg-gradient-to-r from-stone-900 via-[#3B0A17] to-stone-900 text-white p-4 sm:p-5 rounded-2xl border border-amber-500/40 shadow-xl">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="mt-3 sm:mt-4 bg-gradient-to-r from-stone-900 via-[#3B0A17] to-stone-900 text-white p-3.5 sm:p-5 rounded-2xl border border-amber-500/40 shadow-xl">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/70 border border-amber-500/40 px-2 py-0.5 rounded">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/70 border border-amber-500/40 px-2 py-0.5 rounded">
                 {activeSweet.craftSecret}
               </span>
-              <span className="text-xs text-amber-200 font-medium">{activeSweet.teluguName}</span>
+              <span className="text-[11px] sm:text-xs text-amber-200 font-medium">{activeSweet.teluguName}</span>
             </div>
-            <h4 className="font-serif-luxury text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+            <h4 className="font-serif-luxury text-base sm:text-xl font-bold text-white flex items-center gap-2">
               <span>{activeSweet.name}</span>
-              <span className="text-amber-400 font-sans text-base font-bold">
+              <span className="text-amber-400 font-sans text-sm sm:text-base font-bold">
                 {formatInr(activeSweet.price250g)}
                 <span className="text-xs text-stone-400 font-normal"> / 250g</span>
               </span>

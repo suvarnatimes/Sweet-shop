@@ -9,14 +9,14 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ size = 'md', showText = true, className = '' }) => {
   // Dimensions
   const emblemSizes = {
-    sm: 'w-10 h-10',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-24 h-24 sm:w-28 sm:h-28',
+    sm: 'w-8 h-8 sm:w-10 sm:h-10',
+    md: 'w-9 h-9 sm:w-12 sm:h-12',
+    lg: 'w-12 h-12 sm:w-16 sm:h-16',
+    xl: 'w-20 h-20 sm:w-28 sm:h-28',
   };
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-3 ${className}`}>
       {/* Royal Circular Insignia */}
       <div className={`relative ${emblemSizes[size]} flex-shrink-0 drop-shadow-md select-none`}>
         <svg
@@ -124,17 +124,23 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', showText = true, classN
 
       {/* Brand Typographic Identity */}
       {showText && (
-        <div className="flex flex-col">
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-[#881337] group-hover:text-[#9A1750] transition-colors leading-none">
+        <div className="flex flex-col min-w-0">
+          <div className="flex items-center gap-1.5 whitespace-nowrap">
+            <span className="font-serif-luxury text-sm sm:text-xl font-bold tracking-tight text-[#881337] group-hover:text-[#9A1750] transition-colors leading-tight">
               Thatha Rao Sweets
             </span>
-            <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-semibold border border-amber-300">
-              Estd. 1951
+            <span className="text-[9px] sm:text-[10px] bg-amber-100 text-amber-900 px-1 py-0.5 sm:px-1.5 sm:py-0.5 rounded font-semibold border border-amber-300 flex-shrink-0">
+              1951
             </span>
           </div>
 
-          <div className="text-[11px] text-[#29150B]/80 flex items-center gap-1.5 mt-1">
+          {/* Mobile view: Slim single-line Telugu text without wrapping into 3 lines */}
+          <div className="sm:hidden text-[10px] text-amber-950/80 font-medium whitespace-nowrap overflow-hidden text-ellipsis leading-tight mt-0.5">
+            <span>శ్రీ తాతారావు • బందరు లడ్డూ</span>
+          </div>
+
+          {/* Desktop/Tablet view: Full ceremonial title */}
+          <div className="hidden sm:flex text-[11px] text-[#29150B]/80 items-center gap-1.5 mt-0.5 whitespace-nowrap">
             <span className="font-medium text-amber-900">శ్రీ లక్ష్మీ సత్యనారాయణ తాతారావు</span>
             <span className="text-amber-600 font-bold">•</span>
             <span className="text-xs text-[#881337] font-bold">బందరు లడ్డూ & హల్వా</span>

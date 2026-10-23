@@ -70,15 +70,15 @@ export const Header: React.FC = () => {
   return (
     <>
       {/* 1. Dynamic Announcement Bar */}
-      <div className="bg-[#881337] text-[#FFFBEB] text-xs py-2 px-4 shadow-inner relative z-30 font-medium">
+      <div className="bg-[#881337] text-[#FFFBEB] text-[11px] sm:text-xs py-1 sm:py-2 px-3 sm:px-4 shadow-inner relative z-30 font-medium">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 overflow-hidden whitespace-nowrap">
-            <span className="inline-flex items-center gap-1 bg-[#D97706]/30 text-amber-200 px-2 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase">
+          <div className="flex items-center gap-1.5 sm:gap-2 overflow-hidden whitespace-nowrap">
+            <span className="inline-flex items-center gap-1 bg-[#D97706]/30 text-amber-200 px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold tracking-wide uppercase">
               <Award className="w-3 h-3 text-amber-300" />
-              GI Tag No. 438
+              GI No. 438
             </span>
             <span className="truncate">
-              Shipping Fresh Batches Across Hyderabad, Vijayawada, Bangalore & Pan-India • Free Delivery on orders over ₹999!
+              Fresh Batches Across Hyderabad, Bangalore & Pan-India • Free Delivery over ₹999!
             </span>
           </div>
 
@@ -101,16 +101,16 @@ export const Header: React.FC = () => {
       <header
         className={`sticky top-0 z-20 transition-all duration-300 ${
           isScrolled
-            ? 'backdrop-blur-md bg-[#FFFDF7]/95 shadow-md border-b border-amber-200/80 py-2.5'
-            : 'bg-[#FFFDF7] border-b border-amber-100 py-3.5'
+            ? 'backdrop-blur-md bg-[#FFFDF7]/95 shadow-md border-b border-amber-200/80 py-1.5 sm:py-2.5'
+            : 'bg-[#FFFDF7] border-b border-amber-100 py-1.5 sm:py-3'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
             {/* Brand Logo & Heritage Crest */}
             <button
               onClick={() => navigateTo('home')}
-              className="flex items-center gap-3 text-left group focus:outline-none"
+              className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none min-w-0 flex-1 sm:flex-initial"
               aria-label="Thatha Rao Sweets Home"
             >
               <Logo size="md" />
@@ -184,18 +184,18 @@ export const Header: React.FC = () => {
                     setTimeout(() => searchInputRef.current?.focus(), 100);
                   }
                 }}
-                className="p-2 text-stone-700 hover:text-[#881337] hover:bg-amber-100/60 rounded-full transition-colors relative"
+                className="p-1.5 sm:p-2 text-stone-700 hover:text-[#881337] hover:bg-amber-100/60 rounded-full transition-colors relative"
                 aria-label="Search Sweets"
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
 
               {/* Cart Button */}
               <button
                 onClick={openCart}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full font-semibold text-sm transition-all shadow-sm ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm transition-all shadow-sm ${
                   badgeAnimate
-                    ? 'scale-105 bg-[#881337] text-white ring-4 ring-amber-300'
+                    ? 'scale-105 bg-[#881337] text-white ring-2 sm:ring-4 ring-amber-300'
                     : 'bg-[#881337] hover:bg-[#70102d] text-white'
                 }`}
                 aria-label={`Shopping Cart with ${totalItemCount} items`}
@@ -204,7 +204,7 @@ export const Header: React.FC = () => {
                   <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
                   {totalItemCount > 0 && (
                     <span
-                      className={`absolute -top-2 -right-2 bg-[#D97706] text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center border-2 border-[#881337] ${
+                      className={`absolute -top-1.5 -right-2 bg-[#D97706] text-white text-[9px] sm:text-[10px] font-black w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center border border-[#881337] sm:border-2 ${
                         badgeAnimate ? 'animate-bounce' : ''
                       }`}
                     >
@@ -220,10 +220,10 @@ export const Header: React.FC = () => {
               {/* Mobile Menu Hamburger */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-stone-800 hover:text-[#881337] rounded-lg focus:outline-none"
+                className="md:hidden p-1.5 text-stone-800 hover:text-[#881337] rounded-lg focus:outline-none"
                 aria-label="Toggle navigation menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>

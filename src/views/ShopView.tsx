@@ -85,7 +85,30 @@ export const ShopView: React.FC = () => {
         <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
+          {/* Right Column (Platter): On top in mobile view */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative group cursor-pointer" onClick={() => setSelectedCategory('gi-special')}>
+              {/* Outer Golden Aura */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-amber-500/40 to-[#881337]/40 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+
+              {/* 3D Brass Thali Image Pod */}
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full p-2 bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-200 border-4 border-amber-300/80 shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform -rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500">
+                <img
+                  src="/images/sweets/bandar-laddu.jpg"
+                  alt="Original Bandar Laddu"
+                  className="w-full h-full object-cover rounded-full filter contrast-[1.05]"
+                />
+                
+                {/* Floating 3D Badge */}
+                <div className="absolute -bottom-2 -left-2 bg-stone-950/90 text-amber-300 text-[10px] sm:text-[11px] font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl border border-amber-400 shadow-xl backdrop-blur-md">
+                  ✨ Bandar Laddu • GI 438
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Left Column (Content): Below platter on mobile */}
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 text-center lg:text-left">
             {/* Royal Insignia Tag */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-rose-950/40 to-transparent px-3 py-1.5 rounded-xl border border-amber-500/40 backdrop-blur-md">
               <span className="bg-amber-400 text-stone-950 font-black text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">
@@ -117,28 +140,6 @@ export const ShopView: React.FC = () => {
               </div>
               <div className="flex items-center gap-1.5 text-amber-300">
                 <span>🛡️ GI REGISTRY NO. 438</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: 3D Layered Brass Platter Preview */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative group cursor-pointer" onClick={() => setSelectedCategory('gi-special')}>
-              {/* Outer Golden Aura */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-amber-500/40 to-[#881337]/40 rounded-full blur-xl group-hover:blur-2xl transition-all" />
-
-              {/* 3D Brass Thali Image Pod */}
-              <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full p-2 bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-200 border-4 border-amber-300/80 shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform -rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500">
-                <img
-                  src="/images/sweets/bandar-laddu.jpg"
-                  alt="Original Bandar Laddu"
-                  className="w-full h-full object-cover rounded-full filter contrast-[1.05]"
-                />
-                
-                {/* Floating 3D Badge */}
-                <div className="absolute -bottom-2 -left-2 bg-stone-950/90 text-amber-300 text-[11px] font-bold px-3 py-1.5 rounded-xl border border-amber-400 shadow-xl backdrop-blur-md">
-                  ✨ Bandar Laddu • GI 438
-                </div>
               </div>
             </div>
           </div>

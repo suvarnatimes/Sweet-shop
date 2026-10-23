@@ -54,7 +54,33 @@ export const AboutHeritageView: React.FC = () => {
           <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
+            {/* Visual Vignette on top on mobile */}
+            <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative group perspective-1000">
+                {/* Brass Platter Vignette */}
+                <div className="relative w-52 h-52 sm:w-72 sm:h-72 rounded-3xl p-3 bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-200 border-4 border-amber-300/80 shadow-[0_25px_50px_rgba(0,0,0,0.7)] transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
+                  <img
+                    src="/images/sweets/bandar-halwa.jpg"
+                    alt="Heritage Bandar Halwa in Brass Cauldron"
+                    className="w-full h-full object-cover rounded-2xl filter contrast-[1.05]"
+                  />
+                  
+                  {/* Floating Brass Seal */}
+                  <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-stone-950/95 text-white p-2.5 sm:p-3 rounded-2xl border-2 border-amber-400 shadow-2xl flex items-center gap-2">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#881337] text-amber-300 flex items-center justify-center font-black text-xs">
+                      TR
+                    </div>
+                    <div>
+                      <div className="text-[9px] sm:text-[10px] text-amber-400 font-bold uppercase tracking-wider">Original 1951 Kitchen</div>
+                      <div className="text-[11px] sm:text-xs font-black text-stone-100">Fort Road, Bandar</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Left Content Column */}
+            <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-rose-950/40 to-transparent px-3.5 py-1.5 rounded-xl border border-amber-500/40 backdrop-blur-md">
                 <Award className="w-4 h-4 text-amber-400" />
                 <span className="text-amber-200 text-xs font-bold tracking-wide">
@@ -81,31 +107,6 @@ export const AboutHeritageView: React.FC = () => {
                 </div>
                 <div className="bg-rose-950/70 border border-rose-500/40 px-3 py-1.5 rounded-lg text-rose-200">
                   🔥 Babool Wood Brass Vats
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: 3D Heritage Framed Vignette */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative group perspective-1000">
-                {/* Brass Platter Vignette */}
-                <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl p-3 bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-200 border-4 border-amber-300/80 shadow-[0_25px_50px_rgba(0,0,0,0.7)] transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
-                  <img
-                    src="/images/sweets/bandar-halwa.jpg"
-                    alt="Heritage Bandar Halwa in Brass Cauldron"
-                    className="w-full h-full object-cover rounded-2xl filter contrast-[1.05]"
-                  />
-                  
-                  {/* Floating Brass Seal */}
-                  <div className="absolute -bottom-4 -left-4 bg-stone-950/95 text-white p-3 rounded-2xl border-2 border-amber-400 shadow-2xl flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-[#881337] text-amber-300 flex items-center justify-center font-black text-xs">
-                      TR
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Original 1951 Kitchen</div>
-                      <div className="text-xs font-black text-stone-100">Fort Road, Bandar</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
   return (
     <>
       {/* 1. Dynamic Announcement Bar */}
-      <div className="bg-[#881337] text-[#FFFBEB] text-[11px] sm:text-xs py-1 sm:py-2 px-3 sm:px-4 shadow-inner relative z-30 font-medium">
+      <div className="bg-[#881337] text-[#FFFBEB] text-[11px] sm:text-xs py-1 sm:py-2 px-3 sm:px-4 shadow-inner relative z-40 font-medium">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-1.5 sm:gap-2 overflow-hidden whitespace-nowrap">
             <span className="inline-flex items-center gap-1 bg-[#D97706]/30 text-amber-200 px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold tracking-wide uppercase">
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
 
       {/* 2. Main Header */}
       <header
-        className={`sticky top-0 z-20 transition-all duration-300 ${
+        className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
             ? 'backdrop-blur-md bg-[#FFFDF7]/95 shadow-md border-b border-amber-200/80 py-1.5 sm:py-2.5'
             : 'bg-[#FFFDF7] border-b border-amber-100 py-1.5 sm:py-3'

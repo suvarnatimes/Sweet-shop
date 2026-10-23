@@ -115,7 +115,7 @@ export const HomeView: React.FC = () => {
   return (
     <div className="space-y-16 sm:space-y-24 pb-16">
       {/* 1. Grand 3D Indian Heritage Hero Section */}
-      <section className="relative bg-gradient-to-b from-[#220E15] via-[#1A0A0F] to-[#12050A] text-white pt-5 pb-12 sm:pt-14 sm:pb-24 border-b-2 border-amber-500/40 overflow-hidden shadow-2xl">
+      <section className="relative bg-gradient-to-b from-[#220E15] via-[#1A0A0F] to-[#12050A] text-white pt-8 pb-12 sm:pt-14 sm:pb-24 border-b-2 border-amber-500/40 overflow-hidden shadow-2xl">
         {/* Ornate Indian Temple Architectural Toranam / Arch Watermark */}
         <div className="absolute inset-0 kolam-pattern opacity-10 pointer-events-none" />
         

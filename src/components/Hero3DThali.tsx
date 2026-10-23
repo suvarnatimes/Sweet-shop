@@ -258,9 +258,9 @@ export const Hero3DThali: React.FC = () => {
               </div>
             </div>
 
-            {/* Floating Parallax Garnish 1: Fragrant Green Cardamom Pod */}
+            {/* Desktop Floating Parallax Garnish 1: Fragrant Green Cardamom Pod */}
             <div
-              className="absolute -top-1 -right-2 z-20 transition-transform duration-300 pointer-events-none"
+              className="hidden sm:block absolute -top-1 -right-2 z-10 transition-transform duration-300 pointer-events-none"
               style={{
                 transform: `translate3d(${rotateY * -1.8}px, ${rotateX * -1.8}px, 60px)`,
               }}
@@ -274,9 +274,9 @@ export const Hero3DThali: React.FC = () => {
               </div>
             </div>
 
-            {/* Floating Parallax Garnish 2: Roasted Cashew Highlight */}
+            {/* Desktop Floating Parallax Garnish 2: Roasted Cashew Highlight */}
             <div
-              className="absolute -bottom-2 -left-3 z-20 transition-transform duration-300 pointer-events-none"
+              className="hidden sm:block absolute -bottom-2 -left-3 z-10 transition-transform duration-300 pointer-events-none"
               style={{
                 transform: `translate3d(${rotateY * -1.5}px, ${rotateX * -1.5}px, 50px)`,
               }}
@@ -290,9 +290,9 @@ export const Hero3DThali: React.FC = () => {
               </div>
             </div>
 
-            {/* Floating 3D Heritage Seal: GI Tag No. 438 */}
+            {/* Desktop Floating 3D Heritage Seal: GI Tag No. 438 */}
             <div
-              className="absolute -bottom-5 right-2 z-20 transition-transform duration-300"
+              className="hidden sm:block absolute -bottom-5 right-2 z-10 transition-transform duration-300"
               style={{
                 transform: `translate3d(${rotateY * -1.2}px, ${rotateX * -1.2}px, 70px)`,
               }}
@@ -311,6 +311,22 @@ export const Hero3DThali: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Mobile Dedicated Purity Tag Boxes (Crisp, horizontally aligned, zero header overlap) */}
+        <div className="flex sm:hidden flex-wrap items-center justify-center gap-2 mt-4 px-2">
+          <div className="bg-gradient-to-r from-amber-100 via-amber-50 to-amber-200 text-stone-900 px-3 py-1.5 rounded-xl border border-amber-400 shadow-md flex items-center gap-1.5">
+            <Award className="w-3.5 h-3.5 text-[#881337] flex-shrink-0" />
+            <span className="text-[11px] font-bold">{activeSweet.giTag}</span>
+          </div>
+          <div className="bg-amber-950/90 text-amber-200 px-2.5 py-1.5 rounded-xl border border-amber-400/50 shadow-md flex items-center gap-1.5 text-[10px] font-semibold">
+            <span>🌿</span>
+            <span>Hill Cardamom</span>
+          </div>
+          <div className="bg-[#881337]/90 text-white px-2.5 py-1.5 rounded-xl border border-amber-400/50 shadow-md flex items-center gap-1.5 text-[10px] font-semibold">
+            <span>🧈</span>
+            <span>Pure Cow Ghee</span>
           </div>
         </div>
       </div>

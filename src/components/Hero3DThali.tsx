@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Award, Sparkles, ChevronRight, ShoppingBag, CheckCircle, ShieldCheck } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { PRODUCTS } from '../data/products';
 import { formatInr } from '../utils/ecommerce';
 
 interface SweetShowcase {
@@ -83,7 +84,7 @@ export const Hero3DThali: React.FC = () => {
   const [rotateY, setRotateY] = useState(-6);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { navigateTo, addToCart } = useCart();
+  const { navigateTo, addItem, openCart } = useCart();
 
   const activeSweet = SWEET_SHOWCASES[selectedIndex];
 
@@ -337,7 +338,13 @@ export const Hero3DThali: React.FC = () => {
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <button
               onClick={() => {
-                addToCart(activeSweet.slug, '250g', 1);
+                const product = PRODUCTS.find((p) => p.slug === activeSweet.slug);
+                if (product) {
+                  addItem(product, '250g', 1);
+                  openCart();
+                } else {
+                  navigateTo('shop');
+                }
               }}
               className="flex-1 sm:flex-initial px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-md transition-all flex items-center justify-center gap-1.5"
             >

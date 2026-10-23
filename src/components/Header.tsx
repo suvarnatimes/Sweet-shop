@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 import { PRODUCTS } from '../data/products';
-import { formatInr, WHATSAPP_PHONE } from '../utils/ecommerce';
+import { formatInr, WHATSAPP_PHONE, checkPincodeDelivery } from '../utils/ecommerce';
 import { Logo } from './Logo';
 import {
   ShoppingBag,
